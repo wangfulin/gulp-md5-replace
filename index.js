@@ -39,9 +39,9 @@ module.exports = function (ifile, opts) {
         var fileRegExp = null;
         var extlen = extname.length;
         if(isEncrypted){
-          fileRegExp = new RegExp('/' + filename.slice(0, -extlen) + '(_[0-9a-f]{' + length + '})?\\' + extname + '[^a-zA-Z_0-9].*?', 'g');
+          fileRegExp = new RegExp('/(' + filename.slice(0, -extlen) + '(_[0-9a-f]{' + length + '})?\\' + extname + ')[^a-zA-Z_0-9].*?', 'g');
         }else{
-          fileRegExp = new RegExp('/' + filename + '[^a-zA-Z_0-9].*?', 'g');
+          fileRegExp = new RegExp('/(' + filename + ')[^a-zA-Z_0-9].*?', 'g');
         }
 
         if(Object.prototype.toString.call(ifile) == "[object Array]"){
@@ -49,8 +49,8 @@ module.exports = function (ifile, opts) {
                 i_ifile && glob(i_ifile,function(err, i_files){
                     if(err) return console.log(err);
                     i_files.forEach(function(i_ilist){
-                        var result = fs.readFileSync(i_ilist,'utf8').replace(fileRegExp, function(sfile_name){
-                        return sfile_name.replace(filename, md5_filename)
+                        var result = fs.readFileSync(i_ilist,'utf8').replace(fileRegExp, function(sfile_name, original_filename){
+                        return sfile_name.replace(original_filename, md5_filename)
                     });
                         fs.writeFileSync(i_ilist, result, 'utf8');
                     })
@@ -60,8 +60,8 @@ module.exports = function (ifile, opts) {
             ifile && glob(ifile,function(err, files){
                 if(err) return console.log(err);
                 files.forEach(function(ilist){
-                    var result = fs.readFileSync(ilist,'utf8').replace(fileRegExp, function(sfile_name){
-                        return sfile_name.replace(filename, md5_filename)
+                    var result = fs.readFileSync(ilist,'utf8').replace(fileRegExp, function(sfile_name, original_filename){
+                        return sfile_name.replace(original_filename, md5_filename)
                     });
                     fs.writeFileSync(ilist, result, 'utf8');
                 })
