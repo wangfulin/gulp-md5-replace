@@ -1,0 +1,28 @@
+{
+  "name": "gulp-md5-replace",
+  "version": "0.1.0",
+  "description": "md5 the static file and replace referred filename in specific files with newly generated md5 filename",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangfulin/gulp-md5-replace.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulp-md5"
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.14",
+    "through2": "^0.4.1",
+    "glob": "^4.0.6"
+  },
+  "homepage": "https://github.com/wangfulin/gulp-md5-replace.git",
+  "author": {
+    "name": "wangfulin"
+  },
+  "email": "1622913826@qq.com",
+  "license": "MIT",
+}
