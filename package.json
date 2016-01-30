@@ -1,6 +1,6 @@
 {
   "name": "gulp-md5-replace",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "md5 the static file and replace referred filename in specific files with newly generated md5 filename",
   "main": "index.js",
   "scripts": {
