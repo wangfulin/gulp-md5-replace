@@ -1,7 +1,7 @@
 # gulp-md5-replace
 
-[![NPM](https://nodei.co/npm-dl/gulp-md5-replace.png)](https://nodei.co/npm/gulp-md5-replace/)]
-[![NPM](https://nodei.co/npm/gulp-md5-replace.png?downloads=true&downloadRank=true&stars=true)(https://github.com/wangfulin/gulp-md5-replace)]
+[![NPM](https://nodei.co/npm-dl/gulp-md5-replace.png)](https://nodei.co/npm/gulp-md5-replace/)
+[![NPM](https://nodei.co/npm/gulp-md5-replace.png?downloads=true&downloadRank=true&stars=true)](https://github.com/wangfulin/gulp-md5-replace)
 
 > md5 plugin for [gulp](https://github.com/wangfulin/gulp-md5-replace) ,md5 the static files(eg javascript style image files) ;then replace the filenames in css or the html if needed by passing the file or dir in the first parameter, if you want to replace the encrypted filenames to newly generated encrypted filenames or you want to specify the length of md5 filename, you can passing an opts object in the second parameter.
 
